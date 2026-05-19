@@ -25,13 +25,13 @@ body { background: var(--cream); color: var(--ink); font-family: 'Montserrat', s
 .reveal.in { opacity: 1; transform: none; }
 
 /* HERO */
-.hero { min-height: 100vh; background: var(--ink); display: grid; grid-template-rows: auto 1fr auto; position: relative; overflow: hidden; }
+.hero { min-height: 100vh; background: var(--ink); display: grid; grid-template-rows: auto 1fr auto; position: relative; overflow: hidden; width: 100%; }
 .hero-texture { position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(ellipse 70% 55% at 55% 38%, rgba(184,146,106,0.07) 0%, transparent 68%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(184,146,106,0.035) 48px), repeating-linear-gradient(90deg, transparent, transparent 47px, rgba(184,146,106,0.035) 48px); }
-.hero-nav { position: relative; z-index: 2; padding: 2.4rem 5.5vw; display: flex; justify-content: space-between; align-items: center; }
-.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold-pale); }
-.nav-meta { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(244,239,228,0.3); }
-.lang-toggle { display: flex; align-items: center; gap: 0; border: 1px solid rgba(184,146,106,0.5); border-radius: 4px; overflow: hidden; }
-.lang-btn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; padding: 0.5rem 1rem; background: rgba(244,239,228,0.08); color: rgba(244,239,228,0.7); cursor: pointer; border: none; border-right: 1px solid rgba(184,146,106,0.5); transition: background 0.2s, color 0.2s; text-transform: uppercase; min-width: 48px; text-align: center; }
+.hero-nav { position: relative; z-index: 2; padding: 2.4rem 5.5vw; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-width: 0; }
+.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold-pale); min-width: 0; flex-shrink: 1; }
+.nav-meta { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(244,239,228,0.3); white-space: nowrap; }
+.lang-toggle { display: flex; align-items: center; gap: 0; border: 1px solid rgba(184,146,106,0.5); border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.lang-btn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; padding: 0.5rem 1rem; background: rgba(244,239,228,0.08); color: rgba(244,239,228,0.7); cursor: pointer; border: none; border-right: 1px solid rgba(184,146,106,0.5); transition: background 0.2s, color 0.2s; text-transform: uppercase; min-width: 44px; width: 44px; text-align: center; flex-shrink: 0; }
 .lang-btn:last-child { border-right: none; }
 .lang-btn.active { background: rgba(184,146,106,0.35); color: var(--gold-pale); font-weight: 600; }
 .lang-btn:hover:not(.active) { background: rgba(184,146,106,0.15); color: rgba(244,239,228,0.9); }
@@ -48,15 +48,15 @@ body { background: var(--cream); color: var(--ink); font-family: 'Montserrat', s
 .royal-badge-date { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
 .royal-badge-desc { font-size: 0.8rem; color: rgba(244,239,228,0.72); line-height: 1.75; }
 .paul-quotes { display: flex; flex-direction: column; gap: 0; }
-.hero-body { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 6vw; }
+.hero-body { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 6vw; width: 100%; }
 .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold); margin-bottom: 2.2rem; opacity: 0; animation: up 1.2s 0.1s ease forwards; }
-.hero-r8 { position: relative; display: inline-block; margin-bottom: 2.8rem; opacity: 0; animation: up 1.4s 0.2s ease forwards; }
+.hero-r8 { position: relative; display: inline-block; margin-bottom: 2.8rem; opacity: 0; animation: up 1.4s 0.2s ease forwards; padding-right: 0.6em; }
 .hero-r8-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(8rem, 20vw, 16rem); font-weight: 300; line-height: 0.88; color: transparent; -webkit-text-stroke: 1px rgba(184,146,106,0.45); letter-spacing: -0.02em; }
-.hero-r8-reg { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3.5vw, 3rem); font-weight: 300; color: var(--gold); position: absolute; top: 0.05em; right: -0.15em; line-height: 1; }
+.hero-r8-reg { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3.5vw, 3rem); font-weight: 300; color: var(--gold); position: absolute; top: 0.05em; right: 0; line-height: 1; }
 .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 3.2vw, 2.4rem); font-weight: 300; color: var(--parchment); letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.25; margin-bottom: 1rem; opacity: 0; animation: up 1.2s 0.4s ease forwards; }
 .hero-hook { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.25rem); font-style: italic; font-weight: 300; color: rgba(244,239,228,0.78); max-width: 560px; line-height: 1.7; margin-top: 0.4rem; opacity: 0; animation: up 1.2s 0.6s ease forwards; }
 .hero-hook strong { font-style: normal; font-weight: 400; color: var(--gold-pale); }
-.hero-scroll { position: relative; z-index: 2; padding: 2.2rem 5.5vw; display: flex; justify-content: center; opacity: 0; animation: up 1s 1.2s ease forwards; }
+.hero-scroll { position: relative; z-index: 2; padding: 2.2rem 5.5vw; display: flex; justify-content: center; width: 100%; opacity: 0; animation: up 1s 1.2s ease forwards; }
 .scroll-hint { display: flex; flex-direction: column; align-items: center; gap: 0.55rem; font-size: 0.55rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(244,239,228,0.22); }
 .scroll-needle { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--gold), transparent); animation: needle 2.2s ease-in-out infinite; }
 
@@ -250,6 +250,8 @@ footer { background: var(--ink); padding: 5rem 5.5vw; border-top: 1px solid rgba
   .chain-node, .moat-card { border-right: none !important; }
   .chain-arrow { display: none; }
   .denom-specs { grid-template-columns: 1fr; }
+  .nav-meta { display: none !important; }
+  .hero-nav { padding: 1.8rem 4vw; }
 }
 </style>
 </head>
@@ -337,8 +339,8 @@ footer { background: var(--ink); padding: 5rem 5.5vw; border-top: 1px solid rgba
     </div>
     <p class="insight-body reveal" data-lang="es" style="display:none;">La barrera de entrada no es el capital. Es el tiempo y el conocimiento. Oteyza lleva más de 15 años trabajando junto a ganaderos españoles para recuperar las características originales de la fibra merina ibérica: su finura excepcional, su longitud de mecha, su blancura natural y, sobre todo, su rizo distintivo.</p>
     <p class="insight-body reveal" data-lang="en">The barrier to entry is not capital. It is time and knowledge. Oteyza has spent over 15 years working alongside Spanish shepherds to recover the original characteristics of the Iberian merino fibre: its exceptional fineness, its staple length, its natural whiteness and, above all, its distinctive crimp.</p>
-    <p class="insight-body reveal" style="margin-top:1rem; display:none" data-lang="es">El resultado es una lana que ya compite técnicamente con las mejores del mundo — y que tiene algo que ningún competidor puede imitar: <strong style="color:var(--gold-pale);">una historia de siglos, un origen verificable y una escasez estructural de 30.000 kg/año.</strong></p>
-    <p class="insight-body reveal" style="margin-top:1rem;" data-lang="en">The result is a wool that already competes technically with the finest in the world — and that has something no competitor can imitate: <strong style="color:var(--gold-pale);">centuries of history, a verifiable origin and a structural scarcity of 30,000 kg/year.</strong></p>
+    <p class="insight-body reveal" style="margin-top:1rem; display:none" data-lang="es">El resultado es una lana que ya compite técnicamente con las mejores del mundo — y que tiene algo que ningún competidor puede imitar: <strong style="color:var(--gold-pale);">una historia de siglos, un origen verificable y una escasez estructural de desde 30.000 kg/año.</strong></p>
+    <p class="insight-body reveal" style="margin-top:1rem;" data-lang="en">The result is a wool that already competes technically with the finest in the world — and that has something no competitor can imitate: <strong style="color:var(--gold-pale);">centuries of history, a verifiable origin and a structural scarcity of from 30,000 kg/year.</strong></p>
 
     <!-- R8 como denominación registrada -->
     <div class="r8-denomination reveal">
